@@ -1,0 +1,203 @@
+% The MIT License (MIT)
+%
+% Copyright (c) 2012 Irek Jozwiak <emaho@irekjozwiak.com>
+% 
+% Permission is hereby granted, free of charge, to any person obtaining a copy of
+% this software and associated documentation files (the "Software"), to deal in
+% the Software without restriction, including without limitation the rights to
+% use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+% the Software, and to permit persons to whom the Software is furnished to do so,
+% subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+% FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+% COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+% IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+% CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+% Newest version at https://github.com/irekjozwiak/plain_tex_cv
+% If you found this useful and created your CV based or inspired by this code,
+% please feel free to share your results. I'd be happy to learn some tricks from you.
+
+%!TEX TS-program = xetex
+%!TEX encoding = UTF-8 Unicode
+
+\font\rm="Palatino" at 8pt
+\font\headsans="Gill Sans" at 11pt
+\font\it="Palatino"/I at 8pt
+\font\head="Palatino" at 11pt
+\font\headit="Palatino"/I at 11pt
+
+\def\layer2#1{\special{color push Maroon}#1\special{color pop}}
+
+\def\logo{
+	\font\logosans="Gill Sans" at 8.5pt
+	\font\logoit="Palatino"/I at 10pt
+	\font\1="Linux Biolinum O" at 36pt
+	\font\2="Linux Biolinum O" at 48pt
+
+	\centerline{\2I\1\kern-.12emR\kern-.06emE\kern-.06emK\2J\1\kern-.08emO\kern-.06emZ\kern-.06emW\kern-.06emI\kern-.06emA\kern-.06emK}
+	\vskip-6pt
+	\hrule width 200pt\kern-1pt \moveright 210pt \vbox{\hrule width260pt}
+	\vskip3pt
+	
+	\centerline{\layer2{\logosans{HASKELL PROGRAMMER {\logoit \&} INTERACTION DESIGNER}}}
+}
+
+\def\bigheader#1{
+	\font\ltbig="Palatino"/I at 16pt
+	\vskip6em{\ltbig #1}\vskip1em
+	}
+
+\def\smallheader#1{\noindent{\layer2{\headsans#1}}}
+
+\def\experience#1#2#3{
+	\vskip3em
+	\hbox{\smallheader{#1}}
+	\hbox to \hsize{\head#2\hfill\headit#3}
+	\vskip0.5em
+}
+
+\def\headamp{{\headit\&}}
+
+\footline={\hss\it\folio\ of 3\hss}
+\parindent=0pt
+
+\hyphenation{app-li-cat-ions}
+
+%%%%%%
+\rm
+\ 
+\vskip3em
+\logo
+\vskip5em
+\bigheader{About me}
+\halign{\raggedright\vtop{\hsize=110pt#\hfil}&\hbox to 10pt{#}&\raggedright\vtop{\hsize=110pt#\hfil}&\hbox to 10pt{#}&\raggedright\vtop{\hsize=110pt#\hfil}&\hbox to 10pt{#}&\raggedright\vtop{\hsize=110pt#\hfil}\cr
+\smallheader{BUSINESS-FOCUSED}&&\smallheader{AGILE}&&\smallheader{RELIABLE}&&\smallheader{TRANSPARENT}\cr
+\noindent My ultimate goal is to help you make money. I perceive programming as a means of achieving a bigger goal, not an activity on it's own. I'm not a guy who does the\break nine-to-five in his own little field.%
+&&
+I use Agile Software Development to ensure that you can prove your business ideas as quickly as possible. I solve your problems. I try hard not to implement imagined features.%
+&&
+I use the Haskell programming language and Test-\break Driven Development to make certain that your product will work—both in terms of producing correct results and fulfilling user expectations.%
+&&
+When I work, I don't hide knowledge and I don't promote myself. I build teams. I don't care about political games. I'm into building\break great products.%
+\cr			
+}
+
+
+\bigheader{Quick overview {\it (details on the following pages)}}
+
+\smallheader{SKILLS}
+
+Haskell, business analysis, functional programming, interaction design, Test-Driven Development, full cycle development, SQL, Java, LDAP, \TeX, Agile Software Development, object-oriented programming, Ruby, Linux, shell, parsers, networking, architecture design, team building, pair programming, eXtreme Programming, SCRUM, Javascript, AJAX, jQuery, User Interface design, emacs, algorithms and data structures, logic, lambda calculus, design for simplicity, enterprise software, liaising between technical and non-technical staff, web applications, integration, deployment, unit testing, coaching developers, usability, Domain-Specific Languages, learning quickly.
+
+\vskip2em
+
+\smallheader{EXPERIENCE}
+
+\halign{{\it#}\hfil&\hbox to 2em{#}&#\hfil&\hbox to 2em{#}&#\hfil&\hbox to 2em{#}&#\hfil\cr
+2010–&&Webapp, Haskell, Javascript, Agile, analysis, architecture, \TeX&&Telecommunication&&Munich, Germany\cr
+2009–2010&&Webapp, Haskell, Javascript, analysis, \TeX&&Building industry&&Poland\cr
+2005–2008&&Webapp, Java, SQL, Javascript, Agile, analysis&&Investment Banking&&London, UK\cr
+2004–2005&&Webapp, Java, SQL, Agile&&Molecular Biology&&Poland\cr
+2004–2005&&Webapp, PHP, SQL, OOP, Agile&&e-commerce&&Poland\cr
+1999–2005&&C, SQL, FreeBSD, Linux, TCP/IP&&Telecommunication&&Poland\cr
+}
+
+
+\bigheader{Considering hiring me?}
+
+\halign{\hsize=110pt#\hfil&\hbox to 28pt{#}&\hsize=80pt#\hfil&\hbox to 28pt{#}&\hsize=110pt#\hfil&\hbox to 28pt{#}&\hsize=140pt#\hfil\cr
+\smallheader{EMAIL}&\ &\smallheader{CALL}&\ &\smallheader{CHECK}&\ &\smallheader{SEE RECOMMENDATIONS}\cr
+irek@humane-software.com&&+48 606 915 011&&www.humane-software.com&&linkedin.com/in/irekjozwiak\cr			
+}
+\eject
+
+\bigheader{Experience details}
+\vskip1em
+
+\experience{HUMANE SOFTWARE}{Owner \headamp\ Haskell Developer}{May 2010–Present (3 years 4 months\parindent=20pt\footnote*{\it As of August 2013})}
+Our customer, Global Access GmbH, is an internet connectivity and colocation provider.  We have developed billing, traffic, monitoring and cloud solutions.  We integrated well with the on–site staff and came to work together as one team.  The work involved creating a simple enterprise architecture capable of running services that handle different concerns in a decoupled manner.  This in turn allowed us to gradually refactor software written in PHP and Ruby towards a unified, Haskell–based architecture.  The software is largely stateless and thus easy to scale if necessary.  Acceptance tests ensure correct functioning.  We initially wrote unit and system tests in HUnit, but are now moving towards QuickCheck.  We also developed elaborate deployment tests, dictated by the need to deploy the system to over 20 machines that were inaccessible from oustside (giving us no possibility to fix glitches).
+\vskip0.6em
+Technologies used: Haskell, Javascript, (atto)parsec, enumerators, QuickCheck, HUnit, Ruby, SQLite3, TeamCity, nginx, Linux, SNMP, VMWare, automated virtualisation, emacs, eXtreme programming, pair programming.
+
+
+\experience{FIRMUS}{Haskell Developer \headamp\ Interaction Designer}{July 2008–July 2010 (2 years)}
+
+I developed a web-based system for price-modelling and invoicing. Thanks to a good relationship with the customer and small size of the company I was able to employ my ideas virtually without any restrictions. Some of these were quite experimental, yet successful:
+\parindent=20pt
+\item{-}The pricing model was described by a business person using a simple DSL, which included testing facilities. The business code was written using TDD.
+
+\item{-}Instead of multi-field, multi-screen forms, the user interface was based on big text areas (one per task) into which the user typed what he or she would normally write on paper. Instead of complex workflows, parsers interpreted this natural input and provided real-time feedback.
+
+\item{-}The price and invoice were generated on the basis of natural language input, modeled on how non-technical users would communicate with each other. Following just a few simple rules would make the parser happy.
+
+\item{-}Invoices were beautifully typeset using pure TeX.
+
+\item{-}All this was achieved in approx. 4300 lines of Haskell, including tests.
+\parindent=0pt
+
+Despite this sounding like a technical/idea overkill, the software was actually well-received by its users. The user interface differed from other contemporary applications, but it was very similar to what the users were used to, and this mattered to them more. It was also a great opportunity to test ideas that would have never been considered in a corporate setting.
+\vskip0.6em
+Technologies used:
+Haskell, Parsec, TeX, Javascript, AJAX.
+
+\experience{BNP PARIBAS INVESTMENT BANK}{Agile Developer \headamp\ Interaction Designer}{July 2007–August 2008 (1 year 2 months)}
+
+I worked as a Java developer at the Fixed Income Bond Static Data Repository. Using MQ and SQL replication, the system obtained bond information from multiple systems worldwide (including Bloomberg), worked out the quality data, and merged it into a uniform format. The information was then populated to multiple front-office and settlements systems within the bank using XML over MQ. It was also presented via a web interface to employees in different departments, including traders.
+The system employed extensive test automation on the unit level, system level, as well as on the functional level, using FIT tests written by Business Analysts.
+The project was run using a mixture of Scrum and eXtreme Programming practices, including pair programming, Test-Driven Development, refactoring and continuous design and planning. I took part in the estimation, planning, design and development of the functionality. I also created stories for the user interface. I designed most of the user interface-related parts of the features, often creating prototypes to better understand the functionality and to maximise usability, readability and robustness. I have also acted as a Scrum Master.
+\vskip0.6em
+Technologies used:
+Core Java, MQ, Hibernate, Oracle, WebWork, JUnit, JMock, JSUnit, Velocity testing, FIT, AJAX, CSS, D/HTML, DOJO, Tomcat, Javascript, design patterns, eXtreme Programming and Scrum, Ant, IntelliJ IDEA, JProfiler, Linux.
+
+\experience{BNP PARIBAS INVESTMENT BANK}{Agile Developer \headamp\ Interaction Designer}{October 2005–July 2007 (1 year 10 months)}
+
+
+I worked as a Java developer for an Operational Risk management system. It was a group-level project to be used by all business lines world-wide. It was a greenfield project that allowed the bank to comply with Basel II requirements. The system allowed analysts to manage operational risk based on historical and foreseen data, and was set to eventually provide capital limits for traders. 
+I took part in all stages of the full development cycle, including meetings with the customer and gathering requirements, analysing and estimating requirements, creating user stories, developing working and maintainable code, and automating testing. I also acted as a release manager.
+The project used eXtreme Programming practices such as pair programming, continuous design and integration, refactoring and Test-Driven Development.
+I frequently designed user interface features to meet new requirements. I pro-actively implemented usability principles throughout the application.
+I created a strategy and infrastructure to migrate acceptance tests to Watij. 
+I coached developers to familiarise them with eXtreme Programming practices.
+\vskip0.6em
+Technologies used:
+Core Java, J2EE, Hibernate, Spring, JDBC, Oracle, WebWork, servlets, JUnit, DynaMock, JSUnit, Watij, FIT, AJAX, CSS, D/HTML, JSP, Velocity, DOJO, WebSphere, Javascript, Business Objects, design patterns, eXtreme Programming, Linux, Ant, IntelliJ IDEA.
+
+\experience{POZNAN UNIVERSITY OF TECHNOLOGY}{Analyst Developer}{October 2004–June 2005 (9 months)}
+
+
+WebMobis is a platform that allows computational biologists to analyse proteins and visualise them. It stores computation results in SQL database. It is a web-based application built in accordance with enterprise software industry standards. It communicates with other platforms (using HTTP and e-mail), as well as with its own computational engine, to provide analytical data.
+As an analyst and a Java developer in the project, I created the architectural framework for the application. I took part in all stages of the development cycle, such as gathering and analysing requirements, developing working and maintainable code, automated testing and deployment.
+I coached developers to familiarise them with eXtreme Programming practices.
+
+\vskip0.6em
+Technologies used:
+Core Java, Tomcat, PostgreSQL, JDO, Tapestry, servlets, JUnit, JMock, XML, sockets, Ant, Eclipse, UML, Linux, SQL, Object-Oriented Programming, design patterns, eXtreme Programming.
+
+
+\experience{KOLPORTER INFO}{Software Designer (hands-on)}{February 2004–September 2004 (8 months)}
+
+I created a flexible e-commerce platform, which allowed the company to enter the online shopping market. I was a hands-on designer, taking part in all stages of the full development cycle, ie. gathering requirements, analysis, development of the code and automated testing. I also lead the team on the IT side.
+The application was made using Objected-Oriented Design, design patterns, tiers, etc. 
+I was responsible for introducing the agile development process. I also lectured on SQL.
+\vskip0.6em
+Technologies used:
+PHP5, Java techniques, PostgreSQL, UML, FreeBSD, SQL,.PHPUnit, Object-Oriented Programming, design patterns, eXtreme Programming.
+
+
+\experience{VARIOUS COMPANIES}{Developer \headamp\ Network Administrator}{1999–January 2004 (4 years)}
+
+
+I have worked for various companies and organisations as a developer and network administrator. I developed various web-applica\-tions using SQL and low-level modules in C, including a kernel module for FreeBSD.
+I have administered large ISP networks based on both hardware routers as well as FreeBSD and Linux servers. I have created security policies for these networks and servers.
+\vskip0.6em
+
+Technologies used: SQL, ANSI C, PHP, LDAP, FreeBSD, Linux, TCP/IP.
+
+
+\end
